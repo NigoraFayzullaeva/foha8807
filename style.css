@@ -35,7 +35,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .portfolio, .services, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content, 
@@ -687,5 +687,71 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+}
+/* portfolio */
+.portfolio-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.portfolio .title::after{
+    content: "view my works";
+}
+.portfolio-item:last-child{
+    margin-bottom: 0;
+}
+.portfolio-img{
+    flex: 1;
+}
+.por-img{
+    width: 460px;
+    height: 280px;
+}
+.portfolio-description{
+    flex: 1;
+}
+.portfolio-description h1{
+    font-size: 3rem;
+    font-weight: 300;
+}
+.portfolio-description .cta{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.portfolio-description .cta:hover{
+    color: crimson;
+    background: none;
+}
+.has-margin-right{
+    margin-right: 2rem;
+}
+@media (max-width: 600px){
+    .portfolio-item{
+        flex-direction: column;
+    }
+    .portfolio-img{
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+    .por-img {
+        width: 328px;
+        height: 201px;
+    }
+    .portfolio-description{
+        margin: 0;
+        order: 2;
+    }
+    .portfolio-description h1{
+        font-size: 30px;
     }
 }
